@@ -37,7 +37,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'O nas', 'url' => ['/site/about']],
-            ['label' => 'Menu', 'url' => ['/site/index']],
+            ['label' => 'Menu', 'url' => ['/site/menu']],
             ['label' => 'Catering', 'url' => ['/site/index']],
             ['label' => 'Galeria', 'url' => ['/site/index']],
             ['label' => 'Kontakt', 'url' => ['/site/contact']],
