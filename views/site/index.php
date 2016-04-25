@@ -36,7 +36,7 @@ $this->title = 'Pierogowo.pl';
             </div>
             <div class="col-lg-6 soups">
                 <a href='<?= URL::to(["site/soup-of-the-day"]) ?>'>
-                    <?= Html::img('@web/images/soup_of_the_day.jpg') ?>
+                    <?= Html::img('@web/images/soup_of_the_day.jpg', ['class' => "img-rounded img-responsive"]) ?>
                 </a>
             </div>
         </div>
