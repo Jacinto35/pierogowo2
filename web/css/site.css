@@ -90,3 +90,12 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+
+.navbar-nav li form{
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.navbar-nav li form .btn{
+    padding: 0;
+}

@@ -8,11 +8,13 @@ use Yii;
  * This is the model class for table "users".
  *
  * @property integer $user_id
- * @property string $login
+ * @property string $username
  * @property string $password
  */
-class User extends \yii\db\ActiveRecord
+class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
+    private $authKey;
+
     /**
      * @inheritdoc
      */
@@ -27,8 +29,8 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['login', 'password'], 'required'],
-            [['login', 'password'], 'string', 'max' => 255],
+            [['username', 'password'], 'required'],
+            [['username', 'password'], 'string', 'max' => 255],
         ];
     }
 
@@ -39,7 +41,7 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'user_id' => 'User ID',
-            'login' => 'Login',
+            'username' => 'Login',
             'password' => 'Password',
         ];
     }
@@ -52,6 +54,47 @@ class User extends \yii\db\ActiveRecord
      */
     public function validatePassword($password)
     {
-        return $this->password === $password;
+        return $this->password === sha1($password);
     }
+
+    /**
+     * @inheritdoc
+     */
+    public static function findIdentity($id)
+    {
+        return User::findOne(['user_id' => $id]);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getAuthKey()
+    {
+        return $this->authKey;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function validateAuthKey($authKey)
+    {
+        return $this->authKey === $authKey;
+    }
+
+
 }
