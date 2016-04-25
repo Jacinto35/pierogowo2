@@ -91,6 +91,15 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
+/*.soups img:hover {
+    transform: scale(1.05) rotate(5deg);
+    transition: all 0.5s ease-out 0s;
+}
+
+.soups img {
+    transition: all 0.5s ease-out 0s;
+}*/
+
 .navbar-nav li form{
     padding-bottom: 15px;
     padding-top: 15px;

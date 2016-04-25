@@ -17,6 +17,24 @@ $this->params['breadcrumbs'][] = $this->title;
               <th>Pierogi (porcja - 8 sztuk)</th>
               <th>Porcja</th>
               </thead>
+                <tbody>
+                <tr>
+                    <td>ruskie</td>
+                    <td>9,90 zł</td>
+                </tr>
+                <tr>
+                    <td>ruskie</td>
+                    <td>9,90 zł</td>
+                </tr>
+                <tr>
+                    <td>ruskie</td>
+                    <td>9,90 zł</td>
+                </tr>
+                <tr>
+                    <td>ruskie</td>
+                    <td>9,90 zł</td>
+                </tr>
+                </tbody>
             </table>
 </div>
 </div>
