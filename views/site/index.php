@@ -5,47 +5,31 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
     <div class="body-content">
 
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="col-lg-6">
+                <h2>Atualności</h2>
+                <ul>
+                    <li>Zapraszamy na pyzy z mięsem!<br/>
+                    Porcja na ciepło (6 sztuk) w cenie 11,50 zł, zimne na wagę (1 kg) w cenie 26,80 zł.</li>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                    <li>PROMOCJA! Codziennie w godz. 10:00-12:00 wszystkie pierogi* w lokalu -15%!<br/>* - tylko ciepłe porcje</li>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+
+                    <li>Organizujemy przyjęcia okolicznościowe (np. komunie, chrzciny) max. do 20 osób. Zapraszamy do zapoznania się z naszą ofertą!</li>
+
+                </ul>
+
+                <div>
+                    <h4>Pierogowo.pl otwarte jest w następujące dni:</h4>
+                    <p>poniedziałek - piątek w godz. 10:00 - 19:00</p>
+                    <p>sobota w godz. 11:00 - 16:00</p>
+
+                    Zapraszamy!
+                    </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="col-lg-6">
             </div>
         </div>
 

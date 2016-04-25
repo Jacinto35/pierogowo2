@@ -38,8 +38,8 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'O nas', 'url' => ['/site/about']],
             ['label' => 'Menu', 'url' => ['/site/menu']],
-            ['label' => 'Catering', 'url' => ['/site/index']],
-            ['label' => 'Galeria', 'url' => ['/site/index']],
+            ['label' => 'Catering', 'url' => ['/site/catering']],
+            ['label' => 'Galeria', 'url' => ['/site/gallery']],
             ['label' => 'Kontakt', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

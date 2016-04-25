@@ -97,4 +97,19 @@ class SiteController extends Controller
     {
         return $this->render('menu');
     }
+
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
+
+    public function actionCatering()
+    {
+        return $this->render('catering');
+    }
+
+    public function actionSoupOfTheDay()
+    {
+        return $this->render('soupOfTheDay');
+    }
 }

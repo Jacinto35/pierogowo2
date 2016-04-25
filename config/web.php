@@ -38,14 +38,45 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
+            'showScriptName' => true,
             'rules' => [
+                [
+                    'pattern' => 'o_nas',
+                    'route' => 'site/about',
+                ],
+                [
+                    'pattern' => 'kontakt',
+                    'route' => 'site/contact',
+                ],
+                [
+                    'pattern' => 'menu',
+                    'route' => 'site/menu',
+                ],
+                [
+                    'pattern' => 'logowanie',
+                    'route' => 'site/login',
+                ],
+                [
+                    'pattern' => 'logowanie',
+                    'route' => 'site/login',
+                ],
+                [
+                    'pattern' => 'catering',
+                    'route' => 'site/catering',
+                ],
+                [
+                    'pattern' => 'galeria',
+                    'route' => 'site/gallery',
+                ],
+                [
+                    'pattern' => 'zupy-dnia',
+                    'route' => 'site/soup-of-the-day',
+                ],
             ],
         ],
-        */
     ],
     'language' => 'pl-PL',
     'sourceLanguage' => 'en-US',
