@@ -96,7 +96,7 @@ class SiteController extends Controller
 
     public function actionMenu()
     {
-        $menuModel = Menu::findAll(['active' => 1]);
+        $menuModel = Menu::find(['active' => 1])->orderBy('position')->all();
         return $this->render('menu', ['menuModel' => $menuModel]);
     }
 

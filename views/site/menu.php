@@ -21,6 +21,14 @@ $this->params['breadcrumbs'][] = $this->title;
                         <th><?= $menu->name ?></th>
                         <th class='text-right'><?= $menu->measure ?></th>
                         </thead>
+                        <?php if ($menu->additional_info) { ?>
+                            <tfoot>
+                            <tr>
+                                <td colspan='2'><?= $menu->additional_info?></td>
+                            </tr>
+                            </tfoot>
+                        <?php } ?>
+
                         <tbody>
                         <?php if (!empty($menu->items)) {
                             foreach ($menu->items as $item) {
@@ -38,6 +46,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php
                 }
             } ?>
+
+            <div class='shipping_info'>
+                <h4>Dowóz - zasady:</h4>
+                <ul>
+                <li>dostawy realizujemy w godz. od 11:00 do 18:00 (pon.-pt.) oraz od 11:00 do 16:00 (sob.)</li>
+                    <li>przy dowozach płatność tylko gotówką</li>
+                    <li>minimalna kwota zamówienia to 25,00 zł</li>
+                    <li>bezpłatny dowóz w promieniu do 5 km - powyżej dodatkowo 2,00 zł za każdy kolejny kilometr</li>
+                    <li>do kosztów każdej porcji na wynos/z dowozem doliczamy koszt opakowania - 0,80 zł</li>
+                </ul>
+
+                <strong>UWAGA! Możliwość płatności kartą tylko w lokalu!</strong>
+
+
+                </div>
         </div>
     </div>
 </div>
