@@ -23,16 +23,15 @@ $this->params['breadcrumbs'][] = $this->title;
                         </thead>
                         <tbody>
                         <?php if (!empty($menu->items)) {
-                        foreach ($menu->items as $item) {
-                            if ($item->active == '1') {
-                            ?>
-
-                            <tr>
-                                <td><?= $item->description ?></td>
-                                <td class='text-right'><?= $item->price ? number_format($item->price, 2) . ' zł' : '-'; ?></td>
-                            </tr>
-                        <?php }
-                    }
+                            foreach ($menu->items as $item) {
+                                if ($item->active == '1') {
+                                    ?>
+                                    <tr>
+                                        <td><?= $item->description ?></td>
+                                        <td class='text-right'><?= $item->price ? number_format($item->price, 2) . ' zł' : '-'; ?></td>
+                                    </tr>
+                                <?php }
+                            }
                         } ?>
                         </tbody>
                     </table>
