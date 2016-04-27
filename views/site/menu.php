@@ -12,30 +12,33 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-lg-6">
-            <table class="table table-striped">
-              <thead>
-              <th>Pierogi (porcja - 8 sztuk)</th>
-              <th>Porcja</th>
-              </thead>
-                <tbody>
-                <tr>
-                    <td>ruskie</td>
-                    <td>9,90 zł</td>
-                </tr>
-                <tr>
-                    <td>ruskie</td>
-                    <td>9,90 zł</td>
-                </tr>
-                <tr>
-                    <td>ruskie</td>
-                    <td>9,90 zł</td>
-                </tr>
-                <tr>
-                    <td>ruskie</td>
-                    <td>9,90 zł</td>
-                </tr>
-                </tbody>
-            </table>
-</div>
-</div>
+            <?php if (!empty($menuModel)) {
+                foreach ($menuModel as $menu) {
+
+                    ?>
+                    <table class="table table-striped">
+                        <thead>
+                        <th><?= $menu->name ?></th>
+                        <th class='text-right'><?= $menu->measure ?></th>
+                        </thead>
+                        <tbody>
+                        <?php if (!empty($menu->items)) {
+                        foreach ($menu->items as $item) {
+                            if ($item->active == '1') {
+                            ?>
+
+                            <tr>
+                                <td><?= $item->description ?></td>
+                                <td class='text-right'><?= $item->price ? number_format($item->price, 2) . ' zł' : '-'; ?></td>
+                            </tr>
+                        <?php }
+                    }
+                        } ?>
+                        </tbody>
+                    </table>
+                    <?php
+                }
+            } ?>
+        </div>
+    </div>
 </div>

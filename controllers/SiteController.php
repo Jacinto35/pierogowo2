@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Menu;
 
 class SiteController extends Controller
 {
@@ -95,7 +96,8 @@ class SiteController extends Controller
 
     public function actionMenu()
     {
-        return $this->render('menu');
+        $menuModel = Menu::findAll(['active' => 1]);
+        return $this->render('menu', ['menuModel' => $menuModel]);
     }
 
     public function actionGallery()
